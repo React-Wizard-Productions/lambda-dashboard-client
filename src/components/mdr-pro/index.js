@@ -6,3 +6,4 @@ export * from './components/Card/CardFooter';
 export * from './components/Card/CardHeader';
 export * from './components/CustomInput/CustomInput';
 export * from './components/CustomButtons/Button';
+export * from './components/InfoArea/InfoArea';

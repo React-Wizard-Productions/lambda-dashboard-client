@@ -20,6 +20,7 @@ import {
   RegularButton as Button,
   CustomInput,
 } from '..';
+import { useForm } from '../../../hooks/useForm';
 
 const useStyles = makeStyles((theme) => ({
   cardTitle: {
@@ -74,6 +75,16 @@ const useStyles = makeStyles((theme) => ({
 
 function RegisterPage() {
   const classes = useStyles();
+  const [values, handleChange, handleSubmit] = useForm(
+    {
+      firstName: '',
+      lastName: '',
+      username: '',
+      password: '',
+      confirmPassword: '',
+    },
+    () => console.log(values),
+  );
 
   return (
     <div className={classes.container}>
@@ -136,6 +147,9 @@ function RegisterPage() {
                               </InputAdornment>
                             ),
                             placeholder: 'First Name...',
+                            name: 'firstName',
+                            value: values.firstName,
+                            onChange: handleChange,
                           }}
                         />
                       </GridItem>
@@ -155,6 +169,9 @@ function RegisterPage() {
                               </InputAdornment>
                             ),
                             placeholder: 'Last Name...',
+                            name: 'lastName',
+                            value: values.lastName,
+                            onChange: handleChange,
                           }}
                         />
                       </GridItem>
@@ -174,6 +191,9 @@ function RegisterPage() {
                               </InputAdornment>
                             ),
                             placeholder: 'Username...',
+                            name: 'username',
+                            value: values.username,
+                            onChange: handleChange,
                           }}
                         />
                       </GridItem>
@@ -196,7 +216,10 @@ function RegisterPage() {
                             ),
                             placeholder: 'Password...',
                             type: 'password',
-                            autoComplete: false,
+                            autoComplete: 'off',
+                            name: 'password',
+                            value: values.password,
+                            onChange: handleChange,
                           }}
                         />
                       </GridItem>
@@ -219,13 +242,22 @@ function RegisterPage() {
                             ),
                             placeholder: 'Confirm Password...',
                             type: 'password',
-                            autoComplete: false,
+                            autoComplete: 'off',
+                            name: 'confirmPassword',
+                            value: values.confirmPassword,
+                            onChange: handleChange,
                           }}
                         />
                       </GridItem>
                       <GridItem xs={12}>
                         <div className={classes.center}>
-                          <Button round color="primary">
+                          <Button
+                            round
+                            color="primary"
+                            disabled={
+                              values.password !== values.confirmPassword
+                            }
+                          >
                             Get Started
                           </Button>
                         </div>

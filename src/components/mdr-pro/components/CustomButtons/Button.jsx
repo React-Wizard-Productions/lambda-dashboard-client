@@ -379,6 +379,7 @@ export const RegularButton = forwardRef((props, ref) => {
     [classes.justIcon]: justIcon,
     [className]: className !== undefined,
   });
+  console.log(disabled);
   return (
     <Button {...rest} ref={ref} classes={muiClasses} className={btnClasses}>
       {children}

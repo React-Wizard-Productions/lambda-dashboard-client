@@ -14,6 +14,7 @@ import {
   GridItem,
   RegularButton as Button,
 } from '..';
+import { useForm } from '../../../hooks/useForm';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -53,6 +54,13 @@ const useStyles = makeStyles((theme) => ({
 }));
 export function LoginPage() {
   const [cardAnimation, setCardAnimation] = useState('cardHidden');
+  const [values, handleChange, handleSubmit] = useForm(
+    {
+      username: '',
+      password: '',
+    },
+    () => console.log(values),
+  );
   const classes = useStyles();
 
   useEffect(() => {
@@ -107,6 +115,9 @@ export function LoginPage() {
                         <Face className={classes.inputAdornmentIcon} />
                       </InputAdornment>
                     ),
+                    name: 'username',
+                    value: values.username,
+                    onChange: handleChange,
                   }}
                 />
                 <CustomInput
@@ -125,11 +136,20 @@ export function LoginPage() {
                     ),
                     type: 'password',
                     autoComplete: 'off',
+                    name: 'password',
+                    value: values.password,
+                    onChange: handleChange,
                   }}
                 />
               </CardBody>
               <CardFooter className={classes.justifyContentCenter}>
-                <Button color="secondary" simple size="lg" block>
+                <Button
+                  color="secondary"
+                  simple
+                  size="lg"
+                  block
+                  onClick={handleSubmit}
+                >
                   Let ' s Go
                 </Button>
               </CardFooter>

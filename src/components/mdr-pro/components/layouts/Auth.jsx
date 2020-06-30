@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import LoginPage from '../../pages/LoginPage';
 import Footer from '../Footer/Footer';
 import login from '../../../../assets/login3.jpg';
+import AuthNavBar from '../Navbars/AuthNavBar';
 
 const useStyles = makeStyles((theme) => ({
   wrapper: {
@@ -63,6 +64,7 @@ function Auth(props) {
 
   return (
     <div>
+      <AuthNavBar brandText="Temporary" {...rest} />
       <div className={classes.wrapper} ref={wrapper}>
         <div className={classes.fullPage}>
           <LoginPage />

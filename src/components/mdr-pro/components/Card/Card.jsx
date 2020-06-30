@@ -78,18 +78,6 @@ const useStyles = makeStyles((theme) => ({
       )}, 0.7) !important`,
     },
   },
-  cardPricingColor: {
-    "& ul li": {
-      color: theme.dashboard.palette.whiteColor,
-      borderColor: `rgba(${theme.dashboard.hexToRgb(
-        theme.dashboard.palette.whiteColor,
-      )}, 0.3)`,
-      "& b,& svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
-        color: theme.dashboard.palette.whiteColor,
-        fontWeight: 700,
-      },
-    },
-  },
   cardPricing: {
     textAlign: "center",
     "&:after": {
@@ -135,6 +123,19 @@ const useStyles = makeStyles((theme) => ({
       },
     },
   },
+  cardPricingColor: {
+    "& ul li": {
+      color: theme.dashboard.palette.whiteColor,
+      borderColor: `rgba(${theme.dashboard.hexToRgb(
+        theme.dashboard.palette.whiteColor,
+      )}, 0.3)`,
+      "& b,& svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
+        color: theme.dashboard.palette.whiteColor,
+        fontWeight: 700,
+      },
+    },
+  },
+  cardProduct: { marginTop: 30 },
   primary: cardColor(theme, "primary"),
   secondary: cardColor(theme, "secondary"),
   info: cardColor(theme, "info"),
@@ -147,7 +148,6 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 0,
     },
   },
-  cardProduct: { marginTop: 30 },
   cardLogin: {
     transform: `translate3d(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.blackColor,

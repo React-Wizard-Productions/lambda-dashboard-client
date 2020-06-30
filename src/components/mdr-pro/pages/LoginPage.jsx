@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Icon, InputAdornment } from "@material-ui/core";
+import { Icon, InputAdornment, Typography } from "@material-ui/core";
 import Face from "@material-ui/icons/Face";
-import Email from "@material-ui/icons/Email";
+import LockOutlineIcon from "@material-ui/icons/LockOutlined";
 
 import {
   CustomInput,
@@ -72,7 +72,9 @@ export function LoginPage() {
                 className={`${classes.cardHeader} ${classes.textCenter}`}
                 color="secondary"
               >
-                <h4 className={classes.cardTitle}>Log In</h4>
+                <Typography variant="h4" className={classes.cardTitle}>
+                  Log In
+                </Typography>
                 <div className={classes.socialLine}>
                   {[
                     "fab fa-facebook-square",
@@ -117,7 +119,7 @@ export function LoginPage() {
                     endAdornment: (
                       <InputAdornment position="end">
                         <Icon className={classes.inputAdornmentIcon}>
-                          lock_outline
+                          <LockOutlineIcon />
                         </Icon>
                       </InputAdornment>
                     ),

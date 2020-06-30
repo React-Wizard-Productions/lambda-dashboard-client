@@ -101,7 +101,7 @@ CardBody.propTypes = {
   color: PropTypes.bool,
   profile: PropTypes.bool,
   calendar: PropTypes.bool,
-  children: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 export default CardBody;

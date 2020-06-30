@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "react-dom";
 
-import LoginPage from "./components/mdr-pro/pages/LoginPage";
+import Auth from "./components/mdr-pro/components/layouts/Auth";
 import Providers from "./components/mdr-pro/components/providers/Providers";
 
 render(
   <Providers>
-    <LoginPage />
+    <Auth />
   </Providers>,
   document.getElementById("root"),
 );

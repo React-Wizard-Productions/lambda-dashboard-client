@@ -1,39 +1,39 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
 import {
   FormControl,
   InputLabel,
   FormHelperText,
   Input,
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   disabled: {
-    "&:before": {
-      borderColor: "transparent !important",
+    '&:before': {
+      borderColor: 'transparent !important',
     },
   },
   underline: {
-    "&:hover:not($disabled):before,&:before": {
+    '&:hover:not($disabled):before,&:before': {
       borderColor: `${theme.dashboard.palette.gray[4]} !important`,
-      borderWidth: "1px !important",
+      borderWidth: '1px !important',
     },
-    "&:after": {
+    '&:after': {
       borderColor: theme.dashboard.palette.primary[0],
     },
-    "& p": {
+    '& p': {
       fontWeight: 300,
     },
   },
   underlineError: {
-    "&after": {
+    '&after': {
       borderColor: theme.dashboard.palette.danger[0],
     },
   },
   underlineSuccess: {
-    "&after": {
+    '&after': {
       borderColor: theme.dashboard.palette.success[0],
     },
   },
@@ -44,8 +44,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 14,
     lineHeight: 1.42857,
     top: 10,
-    letterSpacing: "unset",
-    "& + $underline": {
+    letterSpacing: 'unset',
+    '& + $underline': {
       marginTop: 0,
     },
   },
@@ -56,38 +56,38 @@ const useStyles = makeStyles((theme) => ({
     color: `${theme.dashboard.palette.success[0]} !important`,
   },
   formControl: {
-    margin: "0 0 17px 0",
+    margin: '0 0 17px 0',
     paddingTop: 27,
-    position: "relative",
-    verticalAlign: "unset",
-    "& svg,& .fab,& .far,& .fal,& .fas,& .material-icons": {
+    position: 'relative',
+    verticalAlign: 'unset',
+    '& svg,& .fab,& .far,& .fal,& .fas,& .material-icons': {
       color: theme.dashboard.palette.gray[14],
     },
   },
   whiteUnderline: {
-    "&:hover:not($disabled):before,&:before": {
+    '&:hover:not($disabled):before,&:before': {
       backgroundColor: theme.dashboard.palette.whiteColor,
     },
-    "&:after": {
+    '&:after': {
       backgroundColor: theme.dashboard.palette.whiteColor,
     },
   },
   input: {
     color: theme.dashboard.palette.gray[14],
-    height: "unset",
-    "&,&::placeholder": {
+    height: 'unset',
+    '&,&::placeholder': {
       fontSize: 14,
       fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
       fontWeight: 400,
       lineHeight: 1.42857,
       opacity: 1,
     },
-    "&::placeholder": {
+    '&::placeholder': {
       color: theme.dashboard.palette.gray[3],
     },
   },
   whiteInput: {
-    "&,&::placeholder": {
+    '&,&::placeholder': {
       color: theme.dashboard.palette.whiteColor,
       opacity: 1,
     },

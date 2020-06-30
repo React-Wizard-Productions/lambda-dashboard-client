@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 import {
   createMuiTheme,
   MuiThemeProvider,
   CssBaseline,
-} from "@material-ui/core";
-import theme from "./theme";
+} from '@material-ui/core';
+import theme from './theme';
 
 function ThemeProvider(props) {
   const { children } = props;

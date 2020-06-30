@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ThemeProvider from "./theme/ThemeProvider";
-import RouterProvider from "./routing/RouterProvider";
+import React from 'react';
+import PropTypes from 'prop-types';
+import ThemeProvider from './theme/ThemeProvider';
+import RouterProvider from './routing/RouterProvider';
 
 function Providers(props) {
   const { children } = props;

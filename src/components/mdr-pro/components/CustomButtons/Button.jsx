@@ -1,8 +1,8 @@
-import React, { forwardRef } from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
+import React, { forwardRef } from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
+import { Button } from '@material-ui/core';
 
 function colorButton(theme, key) {
   return {
@@ -14,7 +14,7 @@ function colorButton(theme, key) {
     )}, 0.2), 0 1px 5px 0 rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette[key][0],
     )}, 0.12)`,
-    "&:hover,&:focus": {
+    '&:hover,&:focus': {
       backgroundColor: theme.dashboard.palette[key][0],
       boxShadow: `0 14px 26px -12px rgba(${theme.dashboard.hexToRgb(
         theme.dashboard.palette[key][0],
@@ -38,7 +38,7 @@ function specialColorButton(theme, key) {
     )}, 0.2), 0 1px 5px 0 rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette[key],
     )}, 0.12)`,
-    "&:hover,&:focus,&:visited": {
+    '&:hover,&:focus,&:visited': {
       backgroundColor: theme.dashboard.palette[key],
       color: theme.dashboard.palette.whiteColor,
       boxShadow: `0 14px 26px 012px rgba(${theme.dashboard.hexToRgb(
@@ -53,8 +53,8 @@ function specialColorButton(theme, key) {
 }
 const useStyles = makeStyles((theme) => ({
   button: {
-    minHeight: "auto",
-    minWidth: "auto",
+    minHeight: 'auto',
+    minWidth: 'auto',
     backgroundColor: theme.dashboard.palette.gray[0],
     color: theme.dashboard.palette.whiteColor,
     boxShadow: `0 2px 2px 0 rgba(${theme.dashboard.hexToRgb(
@@ -64,25 +64,25 @@ const useStyles = makeStyles((theme) => ({
     )}, 0.2), 0 1px 5px 0 rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.gray[0],
     )}, 0.12)`,
-    border: "none",
+    border: 'none',
     borderRadius: 3,
-    position: "relative",
-    padding: "12px 30px",
-    margin: ".3125rem 1px",
+    position: 'relative',
+    padding: '12px 30px',
+    margin: '.3125rem 1px',
     fontSize: 12,
     fontWeight: 400,
-    textTransform: "uppercase",
-    willChange: "box-shadow, transform",
+    textTransform: 'uppercase',
+    willChange: 'box-shadow, transform',
     transition:
-      "box-shadow 0.2s cubic-bezier(0.4,0,1,1), background-color 0.2s cubic-bezier(0.4,0,0.2,1)",
+      'box-shadow 0.2s cubic-bezier(0.4,0,1,1), background-color 0.2s cubic-bezier(0.4,0,0.2,1)',
     lineHeight: 1.42857143,
     letterSpacing: 0,
-    textAlign: "center",
-    whiteSpace: "nowrap",
-    verticalAlign: "middle",
-    touchAction: "manipulation",
-    cursor: "pointer",
-    "&:hover,&:focus": {
+    textAlign: 'center',
+    whiteSpace: 'nowrap',
+    verticalAlign: 'middle',
+    touchAction: 'manipulation',
+    cursor: 'pointer',
+    '&:hover,&:focus': {
       color: theme.dashboard.palette.whiteColor,
       backgroundColor: theme.dashboard.palette.gray[0],
       boxShadow: `0 14px 26px -12px rgba(${theme.dashboard.hexToRgb(
@@ -93,64 +93,64 @@ const useStyles = makeStyles((theme) => ({
         theme.dashboard.palette.gray[0],
       )}, 0.2)`,
     },
-    "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-      position: "relative",
-      display: "inline-block",
+    '& .fab,& .fas,& .far,& .fal,& .material-icons': {
+      position: 'relative',
+      display: 'inline-block',
       top: 0,
-      marginTop: "-1rem",
-      marginBottom: "-1rem",
-      fontSize: "1.1rem",
+      marginTop: '-1rem',
+      marginBottom: '-1rem',
+      fontSize: '1.1rem',
       marginRight: 4,
-      verticalAlign: "middle",
+      verticalAlign: 'middle',
     },
-    "& svg": {
-      position: "relative",
-      display: "inline-block",
+    '& svg': {
+      position: 'relative',
+      display: 'inline-block',
       top: 0,
       width: 18,
       height: 18,
       marginRight: 4,
-      verticalAlign: "middle",
+      verticalAlign: 'middle',
     },
-    "&$justIcon": {
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+    '&$justIcon': {
+      '& .fab,& .fas,& .far,& .fal,& .material-icons': {
         marginTop: 0,
-        position: "absolute",
-        width: "100%",
-        transform: "none",
+        position: 'absolute',
+        width: '100%',
+        transform: 'none',
         left: 0,
         top: 0,
-        height: "100%",
-        lineHeight: "41px",
+        height: '100%',
+        lineHeight: '41px',
         fontSize: 20,
       },
     },
   },
   fullWidth: {
-    width: "100%",
+    width: '100%',
   },
-  secondary: colorButton(theme, "secondary"),
-  primary: colorButton(theme, "primary"),
-  info: colorButton(theme, "info"),
-  success: colorButton(theme, "success"),
-  warning: colorButton(theme, "warning"),
-  danger: colorButton(theme, "danger"),
+  secondary: colorButton(theme, 'secondary'),
+  primary: colorButton(theme, 'primary'),
+  info: colorButton(theme, 'info'),
+  success: colorButton(theme, 'success'),
+  warning: colorButton(theme, 'warning'),
+  danger: colorButton(theme, 'danger'),
   white: {
-    "&,&:focus,&:hover": {
+    '&,&:focus,&:hover': {
       backgroundColor: theme.dashboard.palette.whiteColor,
       color: theme.dashboard.palette.gray[0],
     },
   },
-  twitter: specialColorButton(theme, "twitter"),
-  facebook: specialColorButton(theme, "facebook"),
-  google: specialColorButton(theme, "google"),
-  linkedIn: specialColorButton(theme, "linkedIn"),
-  pinterest: specialColorButton(theme, "pinterest"),
-  youtube: specialColorButton(theme, "youtube"),
-  tumblr: specialColorButton(theme, "tumblr"),
-  behance: specialColorButton(theme, "behance"),
-  dribble: specialColorButton(theme, "dribble"),
-  reddit: specialColorButton(theme, "reddit"),
+  twitter: specialColorButton(theme, 'twitter'),
+  facebook: specialColorButton(theme, 'facebook'),
+  google: specialColorButton(theme, 'google'),
+  linkedIn: specialColorButton(theme, 'linkedIn'),
+  pinterest: specialColorButton(theme, 'pinterest'),
+  youtube: specialColorButton(theme, 'youtube'),
+  tumblr: specialColorButton(theme, 'tumblr'),
+  behance: specialColorButton(theme, 'behance'),
+  dribble: specialColorButton(theme, 'dribble'),
+  reddit: specialColorButton(theme, 'reddit'),
   github: {
     backgroundColor: theme.dashboard.palette.gray[7],
     color: theme.dashboard.palette.whiteColor,
@@ -161,7 +161,7 @@ const useStyles = makeStyles((theme) => ({
     )}, 0.2), 0 1px 5px 0 rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.gray[6],
     )}, 0.12)`,
-    "&:hover,&:focus,&:visited": {
+    '&:hover,&:focus,&:visited': {
       backgroundColor: theme.dashboard.palette.gray[7],
       color: theme.dashboard.palette.whiteColor,
       boxShadow: `0 14px 26px 012px rgba(${theme.dashboard.hexToRgb(
@@ -174,139 +174,139 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   simple: {
-    "&,&:focus,&:hover": {
+    '&,&:focus,&:hover': {
       color: theme.dashboard.palette.whiteColor,
-      background: "transparent",
-      boxShadow: "none",
+      background: 'transparent',
+      boxShadow: 'none',
     },
-    "&$primary": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$primary': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.primary[0],
       },
     },
-    "&$secondary": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$secondary': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.secondary[0],
       },
     },
-    "&$info": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$info': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.info[0],
       },
     },
-    "&$danger": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$danger': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.danger[0],
       },
     },
-    "&$success": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$success': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.success[0],
       },
     },
-    "&$warning": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$warning': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.warning[0],
       },
     },
-    "&$twitter": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$twitter': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.twitter,
       },
     },
-    "&$facebook": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$facebook': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.facebook,
       },
     },
-    "&$google": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$google': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.google,
       },
     },
-    "&$linkedIn": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$linkedIn': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.linkedIn,
       },
     },
-    "&$pinterest": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$pinterest': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.pinterest,
       },
     },
-    "&$youtube": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$youtube': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.youtube,
       },
     },
-    "&$tumblr": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$tumblr': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.tumblr,
       },
     },
-    "&$github": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$github': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.gray[7],
       },
     },
-    "&$behance": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$behance': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.behance,
       },
     },
-    "&$dribble": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$dribble': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.dribble,
       },
     },
-    "&$reddit": {
-      "&,&:focus,&:hover,&:visited": {
+    '&$reddit': {
+      '&,&:focus,&:hover,&:visited': {
         color: theme.dashboard.palette.reddit,
       },
     },
   },
   transparent: {
-    "&:&:focus,&:hover": {
-      color: "inherit",
-      background: "transparent",
-      boxShadow: "none",
+    '&,&:focus,&:hover': {
+      color: 'inherit',
+      background: 'transparent',
+      boxShadow: 'none',
     },
   },
   disabled: {
     opacity: 0.65,
-    pointerEvents: "none",
+    pointerEvents: 'none',
   },
   lg: {
-    "&$justIcon": {
-      "& .fab,& .fas,& .far,& .fal,& svg, & .material-icons": {
+    '&$justIcon': {
+      '& .fab,& .fas,& .far,& .fal,& svg, & .material-icons': {
         marginTop: -4,
       },
     },
-    padding: "1.125rem 2.25rem",
-    fontSize: "0.8875rem",
+    padding: '1.125rem 2.25rem',
+    fontSize: '0.8875rem',
     lineHeight: 1.333333,
-    borderRadius: "0.2rem",
+    borderRadius: '0.2rem',
   },
   sm: {
-    "&$justIcon": {
-      "& .fab,& .fas,& .far,& .fal,& svg, & .material-icons": {
+    '&$justIcon': {
+      '& .fab,& .fas,& .far,& .fal,& svg, & .material-icons': {
         marginTop: 1,
       },
     },
-    padding: "0.40625rem 1.25rem",
-    fontSize: "0.6875rem",
+    padding: '0.40625rem 1.25rem',
+    fontSize: '0.6875rem',
     lineHeight: 1.5,
-    borderRadius: "0.2rem",
+    borderRadius: '0.2rem',
   },
   round: { borderRadius: 30 },
   block: {
-    width: "100% !important",
+    width: '100% !important',
   },
   link: {
-    "&,&:hover,&:focus": {
-      backgroundColor: "transparent",
+    '&,&:hover,&:focus': {
+      backgroundColor: 'transparent',
       color: theme.dashboard.palette.gray[0],
-      boxShadow: "none",
+      boxShadow: 'none',
     },
   },
   justIcon: {
@@ -316,32 +316,32 @@ const useStyles = makeStyles((theme) => ({
     height: 41,
     minWidth: 41,
     width: 41,
-    "& .fab,& .fas,& .far,& .fal,& svg,& .material-icons": {
+    '& .fab,& .fas,& .far,& .fal,& svg,& .material-icons': {
       marginRight: 0,
     },
-    "&$lg": {
+    '&$lg': {
       height: 57,
       minWidth: 57,
       width: 57,
-      lineHeight: "56px",
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+      lineHeight: '56px',
+      '& .fab,& .fas,& .far,& .fal,& .material-icons': {
         fontSize: 32,
-        lineHeight: "56px",
+        lineHeight: '56px',
       },
-      "& svg": {
+      '& svg': {
         width: 32,
         height: 32,
       },
     },
-    "&$sm": {
+    '&$sm': {
       height: 30,
       minWidth: 30,
       width: 30,
-      "& .fab,& .fas,& .far,& .fal,& .material-icons": {
+      '& .fab,& .fas,& .far,& .fal,& .material-icons': {
         fontSize: 17,
-        lineHeight: "29px",
+        lineHeight: '29px',
       },
-      "& svg": {
+      '& svg': {
         width: 17,
         height: 17,
       },
@@ -388,27 +388,27 @@ export const RegularButton = forwardRef((props, ref) => {
 
 RegularButton.propTypes = {
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "white",
-    "twitter",
-    "facebook",
-    "google",
-    "linkedIn",
-    "pinterest",
-    "youtube",
-    "tumblr",
-    "github",
-    "behance",
-    "dribble",
-    "reddit",
-    "transparent",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'white',
+    'twitter',
+    'facebook',
+    'google',
+    'linkedIn',
+    'pinterest',
+    'youtube',
+    'tumblr',
+    'github',
+    'behance',
+    'dribble',
+    'reddit',
+    'transparent',
   ]),
-  size: PropTypes.oneOf(["sm", "lg"]),
+  size: PropTypes.oneOf(['sm', 'lg']),
   simple: PropTypes.bool,
   round: PropTypes.bool,
   fullWidth: PropTypes.bool,

@@ -1,24 +1,24 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   cardFooter: {
     padding: 0,
     paddingTop: 10,
-    margin: "0 15px 10px",
+    margin: '0 15px 10px',
     borderRadius: 0,
-    justifyContent: "space-between",
-    alignItems: "center",
-    display: "flex",
-    backgroundColor: "transparent",
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    display: 'flex',
+    backgroundColor: 'transparent',
     border: 0,
   },
   cardFooterPlain: {
     paddingLeft: 5,
     paddingRight: 5,
-    backgroundColor: "transparent",
+    backgroundColor: 'transparent',
   },
   cardFooterProfile: {
     marginTop: -15,
@@ -27,26 +27,26 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 2,
   },
   cardFooterTestimonial: {
-    display: "block",
+    display: 'block',
   },
   cardFooterStats: {
     borderTop: `1px solid ${theme.dashboard.palette.gray[8]}`,
     marginTop: 20,
-    "& svg": {
-      position: "relative",
+    '& svg': {
+      position: 'relative',
       top: 4,
       marginRight: 3,
       marginLeft: 3,
       width: 16,
       height: 16,
     },
-    "& .fab,& .fas,& .far,& .fal,& .material-icons": {
-      position: "relative",
+    '& .fab,& .fas,& .far,& .fal,& .material-icons': {
+      position: 'relative',
       top: 4,
       marginLeft: 3,
       marginRight: 3,
       fontSize: 16,
-      lineHeight: "16px",
+      lineHeight: '16px',
     },
   },
   cardFooterChart: {

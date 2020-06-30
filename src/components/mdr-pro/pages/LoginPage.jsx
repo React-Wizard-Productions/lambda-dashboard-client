@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import { Icon, InputAdornment, Typography } from "@material-ui/core";
-import Face from "@material-ui/icons/Face";
-import LockOutlineIcon from "@material-ui/icons/LockOutlined";
+import React, { useState, useEffect } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { Icon, InputAdornment, Typography } from '@material-ui/core';
+import Face from '@material-ui/icons/Face';
+import LockOutlineIcon from '@material-ui/icons/LockOutlined';
 
 import {
   CustomInput,
@@ -13,22 +13,22 @@ import {
   CardFooter,
   GridItem,
   RegularButton as Button,
-} from "..";
+} from '..';
 
 const useStyles = makeStyles((theme) => ({
   container: {
     ...theme.dashboard.container.default,
     zIndex: 4,
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down('sm')]: {
       paddingBottom: 100,
     },
   },
   cardHidden: {
     opacity: 0,
-    transform: "translate3d(0,-60px,0)",
+    transform: 'translate3d(0,-60px,0)',
   },
   cardHeader: { marginBottom: 20 },
-  textCenter: { textAlign: "center" },
+  textCenter: { textAlign: 'center' },
   cardTitle: {
     ...theme.dashboard.card.title,
     color: theme.dashboard.palette.whiteColor,
@@ -39,25 +39,25 @@ const useStyles = makeStyles((theme) => ({
   inputAdornmentIcon: {
     color: theme.dashboard.palette.gray[6],
   },
-  justifyContentCenter: { justifyContent: "center !important" },
+  justifyContentCenter: { justifyContent: 'center !important' },
   customButtonClass: {
-    "&,&:focus,&:hover": {
+    '&,&:focus,&:hover': {
       color: theme.dashboard.palette.whiteColor,
     },
     marginLeft: 5,
     marginRight: 5,
   },
   socialLine: {
-    padding: "0.9375rem 0",
+    padding: '0.9375rem 0',
   },
 }));
 export function LoginPage() {
-  const [cardAnimation, setCardAnimation] = useState("cardHidden");
+  const [cardAnimation, setCardAnimation] = useState('cardHidden');
   const classes = useStyles();
 
   useEffect(() => {
     const id = setTimeout(() => {
-      setCardAnimation("");
+      setCardAnimation('');
     }, 700);
     return () => window.clearTimeout(id);
   }, []);
@@ -77,9 +77,9 @@ export function LoginPage() {
                 </Typography>
                 <div className={classes.socialLine}>
                   {[
-                    "fab fa-facebook-square",
-                    "fab fa-twitter",
-                    "fab fa-google-plus",
+                    'fab fa-facebook-square',
+                    'fab fa-twitter',
+                    'fab fa-google-plus',
                   ].map((icon, key) => {
                     return (
                       <Button
@@ -123,8 +123,8 @@ export function LoginPage() {
                         </Icon>
                       </InputAdornment>
                     ),
-                    type: "password",
-                    autoComplete: "off",
+                    type: 'password',
+                    autoComplete: 'off',
                   }}
                 />
               </CardBody>

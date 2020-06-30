@@ -1,11 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import cx from "classnames";
-import { makeStyles } from "@material-ui/core/styles";
+import React from 'react';
+import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { makeStyles } from '@material-ui/core/styles';
 
 const cardColor = (theme, key) => ({
   background: `linear-gradient(60deg, ${theme.dashboard.palette[key][1]}, ${theme.dashboard.palette[key][4]})`,
-  "& h1 small": {
+  '& h1 small': {
     color: `rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.whiteColor,
     )}, 0.8)`,
@@ -23,24 +23,24 @@ const useStyles = makeStyles((theme) => ({
       theme.dashboard.palette.blackColor,
     )}, 0.87)`,
     background: theme.dashboard.palette.whiteColor,
-    width: "100%",
+    width: '100%',
     boxShadow: `0 1px 4px 0 rgba(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.blackColor,
     )}, 0.14)`,
-    position: "relative",
-    display: "flex",
-    flexDirection: "column",
+    position: 'relative',
+    display: 'flex',
+    flexDirection: 'column',
     minWidth: 0,
-    wordWrap: "break-word",
-    fontSize: "0.875rem",
+    wordWrap: 'break-word',
+    fontSize: '0.875rem',
   },
   cardPlain: {
-    background: "transparent",
-    boxShadow: "none",
+    background: 'transparent',
+    boxShadow: 'none',
   },
   cardProfile: {
     marginTop: 30,
-    textAlign: "center",
+    textAlign: 'center',
   },
   cardBlog: {
     marginTop: 60,
@@ -55,15 +55,15 @@ const useStyles = makeStyles((theme) => ({
     )},0.2`,
   },
   cardBackground: {
-    backgroundPosition: "center center",
-    backgroundSize: "cover",
-    textAlign: "center",
-    "&:after": {
-      positon: "absolute",
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    textAlign: 'center',
+    '&:after': {
+      positon: 'absolute',
       zIndex: 1,
-      width: "100%",
-      height: "100%",
-      display: "block",
+      width: '100%',
+      height: '100%',
+      display: 'block',
       left: 0,
       top: 0,
       content: '""',
@@ -72,78 +72,78 @@ const useStyles = makeStyles((theme) => ({
       )}, 0.56)`,
       borderRadius: 6,
     },
-    "& small": {
+    '& small': {
       color: `rgba(${theme.dashboard.hexToRgb(
         theme.dashboard.palette.whiteColor,
       )}, 0.7) !important`,
     },
   },
   cardPricing: {
-    textAlign: "center",
-    "&:after": {
+    textAlign: 'center',
+    '&:after': {
       backgroundColor: `rgba(${theme.dashboard.hexToRgb(
         theme.dashboard.palette.blackColor,
       )}, 0.7) !important`,
     },
-    "& ul": {
-      listStyle: "none",
+    '& ul': {
+      listStyle: 'none',
       padding: 0,
       maxWidth: 240,
-      margin: "10px auto",
-      "& li": {
+      margin: '10px auto',
+      '& li': {
         color: theme.dashboard.palette.gray[0],
-        textAlign: "center",
-        padding: "12px 0",
+        textAlign: 'center',
+        padding: '12px 0',
         borderBottom: `1px solid rgba(${theme.dashboard.hexToRgb(
           theme.dashboard.palette.gray[0],
         )}, 0.13)`,
-        "&:last-child": {
+        '&:last-child': {
           border: 0,
         },
-        "& b": {
+        '& b': {
           color: theme.dashboard.palette.gray[2],
         },
-        "& h1": {
+        '& h1': {
           marginTop: 30,
-          "& small": {
-            display: "inline-block",
+          '& small': {
+            display: 'inline-block',
             height: 0,
             fontSize: 18,
-            "&:first-child": {
-              position: "relative",
+            '&:first-child': {
+              position: 'relative',
               top: -17,
               fontSize: 26,
             },
           },
         },
-        "& svg, & .fab,& .fas,& .far,& .fal,& .material-icons": {
-          position: "relative",
+        '& svg, & .fab,& .fas,& .far,& .fal,& .material-icons': {
+          position: 'relative',
           top: 7,
         },
       },
     },
   },
   cardPricingColor: {
-    "& ul li": {
+    '& ul li': {
       color: theme.dashboard.palette.whiteColor,
       borderColor: `rgba(${theme.dashboard.hexToRgb(
         theme.dashboard.palette.whiteColor,
       )}, 0.3)`,
-      "& b,& svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
+      '& b,& svg,& .fab,& .fas,& .far,& .fal,& .material-icons': {
         color: theme.dashboard.palette.whiteColor,
         fontWeight: 700,
       },
     },
   },
   cardProduct: { marginTop: 30 },
-  primary: cardColor(theme, "primary"),
-  secondary: cardColor(theme, "secondary"),
-  info: cardColor(theme, "info"),
-  success: cardColor(theme, "success"),
-  warning: cardColor(theme, "warning"),
-  danger: cardColor(theme, "danger"),
+  primary: cardColor(theme, 'primary'),
+  secondary: cardColor(theme, 'secondary'),
+  info: cardColor(theme, 'info'),
+  success: cardColor(theme, 'success'),
+  warning: cardColor(theme, 'warning'),
+  danger: cardColor(theme, 'danger'),
   cardChart: {
-    "& p": {
+    '& p': {
       marginTop: 0,
       paddingTop: 0,
     },
@@ -152,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
     transform: `translate3d(${theme.dashboard.hexToRgb(
       theme.dashboard.palette.blackColor,
     )})`,
-    transition: "all 300ms linear",
+    transition: 'all 300ms linear',
   },
 }));
 
@@ -208,12 +208,12 @@ Card.propTypes = {
   pricing: PropTypes.bool,
   testimonial: PropTypes.bool,
   color: PropTypes.oneOf([
-    "primary",
-    "secondary",
-    "info",
-    "success",
-    "warning",
-    "danger",
+    'primary',
+    'secondary',
+    'info',
+    'success',
+    'warning',
+    'danger',
   ]),
   product: PropTypes.bool,
   chart: PropTypes.bool,

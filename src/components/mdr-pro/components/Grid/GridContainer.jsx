@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
-import cx from "classnames";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid } from '@material-ui/core';
+import cx from 'classnames';
 
 const useStyles = makeStyles(() => ({
   grid: {
-    margin: "0 -15px",
-    width: "calc(100% + 30px)",
+    margin: '0 -15px',
+    width: 'calc(100% + 30px)',
   },
 }));
 

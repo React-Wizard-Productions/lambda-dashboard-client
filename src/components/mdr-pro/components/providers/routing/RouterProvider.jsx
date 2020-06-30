@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { BrowserRouter as Router } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function RouterProvider(props) {
   const { children } = props;

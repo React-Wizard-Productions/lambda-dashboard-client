@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Icon, InputAdornment, Typography } from '@material-ui/core';
 import Face from '@material-ui/icons/Face';
@@ -15,6 +15,8 @@ import {
   RegularButton as Button,
 } from '..';
 import { useForm } from '../../../hooks/useForm';
+import { ActionsContext } from '../components/providers/redux/Actions';
+import { DataProviderContext } from '../components/providers/redux/DataProvider';
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -53,13 +55,20 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 export function LoginPage() {
+  const {
+    auth: { login },
+  } = useContext(ActionsContext);
+  const {
+    auth: { errors, isLoading },
+  } = useContext(DataProviderContext);
+
   const [cardAnimation, setCardAnimation] = useState('cardHidden');
   const [values, handleChange, handleSubmit] = useForm(
     {
       username: '',
       password: '',
     },
-    () => console.log(values),
+    () => login(values),
   );
   const classes = useStyles();
 
@@ -104,6 +113,8 @@ export function LoginPage() {
               </CardHeader>
               <CardBody>
                 <CustomInput
+                  error={Boolean(errors)}
+                  helperText={errors && 'UnAuthorized, Please Try Again'}
                   labelText="Username..."
                   id="username"
                   formControlProps={{
@@ -148,6 +159,7 @@ export function LoginPage() {
                   simple
                   size="lg"
                   block
+                  disabled={isLoading}
                   onClick={handleSubmit}
                 >
                   Let ' s Go

@@ -135,7 +135,7 @@ function RegisterPage() {
                         <CustomInput
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.customFormControlProps,
+                            className: classes.customFormControlClasses,
                           }}
                           inputProps={{
                             startAdornment: (
@@ -157,7 +157,7 @@ function RegisterPage() {
                         <CustomInput
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.customFormControlProps,
+                            className: classes.customFormControlClasses,
                           }}
                           inputProps={{
                             startAdornment: (
@@ -179,7 +179,7 @@ function RegisterPage() {
                         <CustomInput
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.customFormControlProps,
+                            className: classes.customFormControlClasses,
                           }}
                           inputProps={{
                             startAdornment: (
@@ -197,11 +197,11 @@ function RegisterPage() {
                           }}
                         />
                       </GridItem>
-                      <GridItem xs={12} md={6}>
+                      <GridItem xs={12}>
                         <CustomInput
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.customFormControlProps,
+                            className: classes.customFormControlClasses,
                           }}
                           inputProps={{
                             startAdornment: (
@@ -223,11 +223,11 @@ function RegisterPage() {
                           }}
                         />
                       </GridItem>
-                      <GridItem xs={12} md={6}>
+                      <GridItem xs={12}>
                         <CustomInput
                           formControlProps={{
                             fullWidth: true,
-                            className: classes.customFormControlProps,
+                            className: classes.customFormControlClasses,
                           }}
                           inputProps={{
                             startAdornment: (
